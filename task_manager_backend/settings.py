@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'task_manager_backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',  # or use the IP address of your database server
+        'NAME': 'tasks_g0kv',
+        'USER': 'root',
+        'PASSWORD': 'CprNEQAQ0Ic1JYUKZWHYWdXZzXfKoNc6',
+        'HOST': 'dpg-cv81sqhu0jms73c7eea0-a.oregon-postgres.render.com',  # or use the IP address of your database server
         'PORT': '5432',       # default PostgreSQL port
     }
 }
