@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8vu)gh$gtkx(ri=$_#99z$rr^bjiz6l6edx6@!w(%yw)_xih+1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -81,8 +81,19 @@ WSGI_APPLICATION = 'task_manager_backend.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost',  # or use the IP address of your database server
+        'PORT': '5432',       # default PostgreSQL port
+    }
 }
+
+#DATABASES = {
+#    'default': dj_database_url.config(default=os.getenv("DATABASE_URL"))
+#}
 
 
 # Password validation
